@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1FAE710A250BFB72009949D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE7109250BFB72009949D9 /* AppDelegate.swift */; };
 		1FAE710C250BFB72009949D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE710B250BFB72009949D9 /* SceneDelegate.swift */; };
-		1FAE710E250BFB72009949D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE710D250BFB72009949D9 /* ViewController.swift */; };
 		1FAE7111250BFB72009949D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FAE710F250BFB72009949D9 /* Main.storyboard */; };
 		1FAE7113250BFB72009949D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FAE7112250BFB72009949D9 /* Assets.xcassets */; };
 		1FAE7116250BFB72009949D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FAE7114250BFB72009949D9 /* LaunchScreen.storyboard */; };
@@ -19,7 +18,6 @@
 		1FAE7106250BFB72009949D9 /* SimpleMesageApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMesageApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FAE7109250BFB72009949D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FAE710B250BFB72009949D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1FAE710D250BFB72009949D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1FAE7110250BFB72009949D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1FAE7112250BFB72009949D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FAE7115250BFB72009949D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,7 +56,6 @@
 			children = (
 				1FAE7109250BFB72009949D9 /* AppDelegate.swift */,
 				1FAE710B250BFB72009949D9 /* SceneDelegate.swift */,
-				1FAE710D250BFB72009949D9 /* ViewController.swift */,
 				1FAE710F250BFB72009949D9 /* Main.storyboard */,
 				1FAE7112250BFB72009949D9 /* Assets.xcassets */,
 				1FAE7114250BFB72009949D9 /* LaunchScreen.storyboard */,
@@ -138,7 +135,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FAE710E250BFB72009949D9 /* ViewController.swift in Sources */,
 				1FAE710A250BFB72009949D9 /* AppDelegate.swift in Sources */,
 				1FAE710C250BFB72009949D9 /* SceneDelegate.swift in Sources */,
 			);
@@ -294,7 +290,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dream.team.SimpleMesageApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,7 +308,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dream.team.SimpleMesageApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
