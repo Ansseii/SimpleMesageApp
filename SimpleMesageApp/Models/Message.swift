@@ -10,5 +10,3 @@ struct Message {
     let text: String
     let person: Profile
 }
-
-

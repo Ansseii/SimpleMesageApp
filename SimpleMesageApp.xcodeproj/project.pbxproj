@@ -65,6 +65,7 @@
 				3750F567250C30CB00817D94 /* Models */,
 				1FAE7109250BFB72009949D9 /* AppDelegate.swift */,
 				1FAE710B250BFB72009949D9 /* SceneDelegate.swift */,
+				3750F56A250C327900817D94 /* DataManager.swift */,
 				1FAE710F250BFB72009949D9 /* Main.storyboard */,
 				1FAE7112250BFB72009949D9 /* Assets.xcassets */,
 				1FAE7114250BFB72009949D9 /* LaunchScreen.storyboard */,
@@ -79,7 +80,6 @@
 				3750F568250C30DB00817D94 /* User.swift */,
 				3750F56C250C336600817D94 /* Message.swift */,
 				3750F56E250CFD3E00817D94 /* Profile.swift */,
-				3750F56A250C327900817D94 /* DataManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";

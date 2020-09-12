@@ -35,13 +35,3 @@ class DataManager {
     
     
 }
-
-extension DataManager {
-    static func setMessage(message: Message) {
-        DataManager.shared.messages.append(message)
-    }
-
-    static func getMessages() -> [Message] {
-        DataManager.shared.messages
-    }
-}
