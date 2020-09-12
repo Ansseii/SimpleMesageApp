@@ -15,6 +15,7 @@
 		3750F569250C30DB00817D94 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3750F568250C30DB00817D94 /* User.swift */; };
 		3750F56B250C327900817D94 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3750F56A250C327900817D94 /* DataManager.swift */; };
 		3750F56D250C336600817D94 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3750F56C250C336600817D94 /* Message.swift */; };
+		3750F56F250CFD3E00817D94 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3750F56E250CFD3E00817D94 /* Profile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3750F568250C30DB00817D94 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3750F56A250C327900817D94 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		3750F56C250C336600817D94 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		3750F56E250CFD3E00817D94 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +66,11 @@
 				3750F567250C30CB00817D94 /* Models */,
 				1FAE7109250BFB72009949D9 /* AppDelegate.swift */,
 				1FAE710B250BFB72009949D9 /* SceneDelegate.swift */,
+				3750F56A250C327900817D94 /* DataManager.swift */,
+				1FAE710F250BFB72009949D9 /* Main.storyboard */,
 				1FAE7112250BFB72009949D9 /* Assets.xcassets */,
 				1FAE7114250BFB72009949D9 /* LaunchScreen.storyboard */,
 				1FAE7117250BFB72009949D9 /* Info.plist */,
-				3750F56A250C327900817D94 /* DataManager.swift */,
 			);
 			path = SimpleMesageApp;
 			sourceTree = "<group>";
@@ -85,6 +88,7 @@
 			children = (
 				3750F568250C30DB00817D94 /* User.swift */,
 				3750F56C250C336600817D94 /* Message.swift */,
+				3750F56E250CFD3E00817D94 /* Profile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -161,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FAE710A250BFB72009949D9 /* AppDelegate.swift in Sources */,
+				3750F56F250CFD3E00817D94 /* Profile.swift in Sources */,
 				3750F56B250C327900817D94 /* DataManager.swift in Sources */,
 				3750F56D250C336600817D94 /* Message.swift in Sources */,
 				3750F569250C30DB00817D94 /* User.swift in Sources */,

@@ -8,7 +8,5 @@
 
 struct Message {
     let text: String
-    let person: PersonType
+    let person: Profile
 }
-
-
