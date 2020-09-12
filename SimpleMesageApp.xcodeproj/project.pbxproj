@@ -62,16 +62,24 @@
 		1FAE7108250BFB72009949D9 /* SimpleMesageApp */ = {
 			isa = PBXGroup;
 			children = (
+				1FAE711D250CF9D5009949D9 /* Storyboard */,
 				3750F567250C30CB00817D94 /* Models */,
 				1FAE7109250BFB72009949D9 /* AppDelegate.swift */,
 				1FAE710B250BFB72009949D9 /* SceneDelegate.swift */,
 				3750F56A250C327900817D94 /* DataManager.swift */,
-				1FAE710F250BFB72009949D9 /* Main.storyboard */,
 				1FAE7112250BFB72009949D9 /* Assets.xcassets */,
 				1FAE7114250BFB72009949D9 /* LaunchScreen.storyboard */,
 				1FAE7117250BFB72009949D9 /* Info.plist */,
 			);
 			path = SimpleMesageApp;
+			sourceTree = "<group>";
+		};
+		1FAE711D250CF9D5009949D9 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				1FAE710F250BFB72009949D9 /* Main.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		3750F567250C30CB00817D94 /* Models */ = {
