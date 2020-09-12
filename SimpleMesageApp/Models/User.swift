@@ -14,9 +14,24 @@ struct User {
 
 extension User {
     static func getUsers() -> [User] {
-        var users: [User] = []
-        users.append(DataManager.shared.userOne)
-        users.append(DataManager.shared.userTwo)
-        return users
+        DataManager.shared.users
+    }
+    
+    static func auth(login: String, password: String) -> User? {
+        for user in getUsers() {
+            if user.login == login && user.password == password {
+                return user
+            }
+        }
+        return nil
+    }
+    
+    static func getUser(by type: PersonType) -> User? {
+        for user in getUsers() {
+            if user.profile.type == type {
+                return user
+            }
+        }
+        return nil
     }
 }
