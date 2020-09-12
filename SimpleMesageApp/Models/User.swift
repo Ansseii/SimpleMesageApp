@@ -11,3 +11,12 @@ struct User {
     let password: String
     let profile: Profile
 }
+
+extension User {
+    static func getUsers() -> [User] {
+        var users: [User] = []
+        users.append(DataManager.shared.userOne)
+        users.append(DataManager.shared.userTwo)
+        return users
+    }
+}

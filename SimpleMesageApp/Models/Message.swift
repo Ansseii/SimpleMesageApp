@@ -10,3 +10,13 @@ struct Message {
     let text: String
     let person: Profile
 }
+
+extension Message {
+    static func setMessage(message: Message) {
+        DataManager.shared.messages.append(message)
+    }
+    
+    static func getMessages() -> [Message] {
+        DataManager.shared.messages
+    }
+}
