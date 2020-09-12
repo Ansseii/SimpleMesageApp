@@ -23,12 +23,3 @@ enum PersonType {
     case bill
 }
 
-extension Profile {
-    func setMessage(message: Message) {
-        DataManager.shared.messages.append(message)
-    }
-
-    func getMessages() -> [Message] {
-        DataManager.shared.messages
-    }
-}
