@@ -17,6 +17,12 @@ extension Message {
     }
     
     static func getMessages() -> [Message] {
-        DataManager.shared.messages
+        var messages = DataManager.shared.messages
+        
+        if messages.count == 0 {
+            messages = DataManager.shared.defaultMessages
+        }
+        
+        return messages
     }
 }
