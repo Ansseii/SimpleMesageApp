@@ -75,7 +75,6 @@
 				1FAE7109250BFB72009949D9 /* AppDelegate.swift */,
 				1FAE710B250BFB72009949D9 /* SceneDelegate.swift */,
 				2577D783250D2E31006F0D02 /* MessageViewController.swift */,
-				1FAE710F250BFB72009949D9 /* Main.storyboard */,
 				3750F56A250C327900817D94 /* DataManager.swift */,
 				1FAE7112250BFB72009949D9 /* Assets.xcassets */,
 				1FAE7114250BFB72009949D9 /* LaunchScreen.storyboard */,
