@@ -188,7 +188,7 @@
                                         <rect key="frame" x="252" y="0.0" width="36" height="34"/>
                                         <state key="normal" title="Send"/>
                                         <connections>
-                                            <action selector="pressSendWithSender:" destination="g6F-tV-7Gp" eventType="touchUpInside" id="0gF-xG-i52"/>
+                                            <action selector="pressSend" destination="g6F-tV-7Gp" eventType="touchUpInside" id="iNN-tX-iHf"/>
                                         </connections>
                                     </button>
                                 </subviews>
