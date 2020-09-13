@@ -15,7 +15,7 @@ class MessageViewController: UIViewController {
     @IBOutlet var inputField: UITextField!
     
     var messages: [Message] = Message.getMessages()
-    var profile = Profile(type: .bill, name: "as", surname: "be", avatar: "cd", about: "rt")
+    var profile: Profile!
     
     override func viewDidLoad() {
         super.viewDidLoad()
