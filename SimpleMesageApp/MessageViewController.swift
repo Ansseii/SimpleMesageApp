@@ -16,11 +16,23 @@ class MessageViewController: UIViewController {
     
     var messages: [Message] = Message.getMessages()
     var profile = Profile(type: .bill, name: "as", surname: "be", avatar: "cd", about: "rt")
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         inputField.delegate = self
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillShow),
+            name: UIResponder.keyboardWillShowNotification,
+            object: nil)
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillHide),
+            name: UIResponder.keyboardWillHideNotification,
+            object: nil)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -33,6 +45,7 @@ class MessageViewController: UIViewController {
         Message.setMessage(message: message)
         messages = Message.getMessages()
         inputField.text = ""
+        inputField.resignFirstResponder()
         tableView.reloadData()
     }
 }
@@ -56,6 +69,20 @@ extension MessageViewController: UITableViewDataSource {
         let message = messages[indexPath.section]
         cell.textLabel?.text = message.text
         return cell
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
     }
 }
 
