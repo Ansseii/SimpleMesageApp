@@ -8,17 +8,11 @@
 
 import UIKit
 
-struct Message {
-    let author: String
-    let text: String
-}
 
 class MessageViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var inputField: UITextField!
-    
-    var messages: [Message] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,21 +27,19 @@ class MessageViewController: UIViewController {
 extension MessageViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        messages.count
+        0
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        messages[section].author
+        nil
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath)
-        let message = messages[indexPath.section]
-        cell.textLabel?.text = message.text
         return cell
     }
 }
