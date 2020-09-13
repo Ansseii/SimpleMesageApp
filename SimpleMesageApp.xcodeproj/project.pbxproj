@@ -18,7 +18,6 @@
 		3750F56B250C327900817D94 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3750F56A250C327900817D94 /* DataManager.swift */; };
 		3750F56D250C336600817D94 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3750F56C250C336600817D94 /* Message.swift */; };
 		3750F56F250CFD3E00817D94 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3750F56E250CFD3E00817D94 /* Profile.swift */; };
-		603C7C1E250E42FC00DE6EF4 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603C7C1D250E42FC00DE6EF4 /* TabBarViewController.swift */; };
 		60D409A4250E26F100F7A87D /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D409A3250E26F100F7A87D /* LogInViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +35,6 @@
 		3750F56A250C327900817D94 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		3750F56C250C336600817D94 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		3750F56E250CFD3E00817D94 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		603C7C1D250E42FC00DE6EF4 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		60D409A3250E26F100F7A87D /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,7 +68,6 @@
 		1FAE7108250BFB72009949D9 /* SimpleMesageApp */ = {
 			isa = PBXGroup;
 			children = (
-				603C7C1D250E42FC00DE6EF4 /* TabBarViewController.swift */,
 				60D409A3250E26F100F7A87D /* LogInViewController.swift */,
 				1FAE711D250CF9D5009949D9 /* Storyboard */,
 				3750F567250C30CB00817D94 /* Models */,
@@ -175,7 +172,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				603C7C1E250E42FC00DE6EF4 /* TabBarViewController.swift in Sources */,
 				1FAE710A250BFB72009949D9 /* AppDelegate.swift in Sources */,
 				1F9E6268250E5CAF00621B34 /* ProfileViewController.swift in Sources */,
 				2577D784250D2E31006F0D02 /* MessageViewController.swift in Sources */,
