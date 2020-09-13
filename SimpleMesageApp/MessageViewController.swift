@@ -27,7 +27,7 @@ class MessageViewController: UIViewController {
         view.endEditing(true)
     }
     
-    @IBAction func pressSend(sender: Any) {
+    @IBAction func pressSend() {
         let message = Message(text: inputField.text ?? "", person: profile)
         Message.setMessage(message: message)
         messages = Message.getMessages()
