@@ -152,14 +152,24 @@
         <!--Chat-->
         <scene sceneID="8b1-Q8-Nca">
             <objects>
-                <viewController id="g6F-tV-7Gp" sceneMemberID="viewController">
+                <viewController id="g6F-tV-7Gp" customClass="MessageViewController" customModule="SimpleMesageApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="95R-xt-9P5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UWO-v7-chq">
-                                <rect key="frame" x="0.0" y="91" width="320" height="367"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="414"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="messageCell" id="4jX-d8-CUR">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4jX-d8-CUR" id="Dfp-ya-qed">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JkI-Ld-h6r">
                                 <rect key="frame" x="16" y="477" width="288" height="34"/>
@@ -172,6 +182,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dyf-Jd-JYn">
                                         <rect key="frame" x="252" y="0.0" width="36" height="34"/>
                                         <state key="normal" title="Send"/>
+                                        <connections>
+                                            <action selector="pressSendWithSender:" destination="g6F-tV-7Gp" eventType="touchUpInside" id="0gF-xG-i52"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -189,6 +202,10 @@
                         <viewLayoutGuide key="safeArea" id="vrX-Pk-4zz"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Chat" image="square.and.pencil" catalog="system" id="FtM-KV-Kmp"/>
+                    <connections>
+                        <outlet property="inputField" destination="MoL-mV-gmg" id="nXu-xp-8ql"/>
+                        <outlet property="tableView" destination="UWO-v7-chq" id="VOc-vE-YcV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O36-mk-NEw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
