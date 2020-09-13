@@ -117,6 +117,11 @@
                         <viewLayoutGuide key="safeArea" id="s0J-lp-ved"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="SMj-pq-0Wn"/>
+                    <connections>
+                        <outlet property="profileAbout" destination="KWQ-67-CJn" id="maH-YO-PsA"/>
+                        <outlet property="profileFullName" destination="SRC-Ie-fO9" id="dIE-bc-EbA"/>
+                        <outlet property="profileImage" destination="ed6-Zg-YVZ" id="T2k-NE-4HB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nFU-J0-VHC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
