@@ -13,7 +13,7 @@ class LogInViewController: UIViewController {
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    //private var user: User!
+    private var user: User!
     
     // MARK: - overrided funcs
     override func viewDidLoad() {
@@ -24,11 +24,29 @@ class LogInViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard let navigationVC = segue.destination as?
+            UINavigationController else { return }
+        
+        guard let tabBarController = navigationVC.viewControllers.first as?
+            UITabBarController else { return }
+        
+        guard let profileVC = tabBarController.viewControllers?.first as?
+            ProfileViewController else { return }
+        
+        guard let messageVC = tabBarController.viewControllers?.last as? MessageViewController else { return }
         /*
-         let tabBarController = segue.destination as! UITabBarController
-         let welcomeVC = tabBarController.viewControllers?.first as! HelloViewController
-         welcomeVC.profile = user.profile
+         if let user = self.user {
+             profileVC.currentProfile = user.profile
+             //messageVC.currentProfile = user.profile
+         } else {
+             showAlert("Invalid login or password",
+                       withMessage: "Please, enter correct login and password",
+                       textField: passwordTextField)
+         }
          */
+        profileVC.currentProfile = user.profile
+        //messageVC.currentProfile = user.profile
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -44,26 +62,17 @@ class LogInViewController: UIViewController {
     }
     
     @IBAction func logInButtonPressed() {
-        if let user = User.auth(login: userNameTextField.text ?? "",
+        if let currentUser = User.auth(login: userNameTextField.text ?? "",
                                 password: passwordTextField.text ?? "") {
-            
-            guard
-                userNameTextField.text == user.login,
-                passwordTextField.text == user.password
-            else {
-                showAlert("Invalid login or password",
-                            withMessage: "Please, enter correct login and password",
-                            textField: passwordTextField)
-                return
-            }
+            user = currentUser
             performSegue(withIdentifier: "welcomePage", sender: nil)
+
         } else {
             showAlert("Invalid login or password",
             withMessage: "Please, enter correct login and password",
             textField: passwordTextField)
         }
     }
-    
     
     @IBAction func autoLoginAction(_ sender: UIButton) {
         switch sender.tag {
