@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F9E6268250E5CAF00621B34 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9E6267250E5CAF00621B34 /* ProfileViewController.swift */; };
 		1FAE710A250BFB72009949D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE7109250BFB72009949D9 /* AppDelegate.swift */; };
 		1FAE710C250BFB72009949D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE710B250BFB72009949D9 /* SceneDelegate.swift */; };
 		1FAE7111250BFB72009949D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FAE710F250BFB72009949D9 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F9E6267250E5CAF00621B34 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1FAE7106250BFB72009949D9 /* SimpleMesageApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMesageApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FAE7109250BFB72009949D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FAE710B250BFB72009949D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				1FAE7112250BFB72009949D9 /* Assets.xcassets */,
 				1FAE7114250BFB72009949D9 /* LaunchScreen.storyboard */,
 				1FAE7117250BFB72009949D9 /* Info.plist */,
+				1F9E6267250E5CAF00621B34 /* ProfileViewController.swift */,
 			);
 			path = SimpleMesageApp;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			files = (
 				603C7C1E250E42FC00DE6EF4 /* TabBarViewController.swift in Sources */,
 				1FAE710A250BFB72009949D9 /* AppDelegate.swift in Sources */,
+				1F9E6268250E5CAF00621B34 /* ProfileViewController.swift in Sources */,
 				2577D784250D2E31006F0D02 /* MessageViewController.swift in Sources */,
 				3750F56F250CFD3E00817D94 /* Profile.swift in Sources */,
 				3750F56B250C327900817D94 /* DataManager.swift in Sources */,
