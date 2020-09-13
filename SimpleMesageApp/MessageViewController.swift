@@ -15,11 +15,16 @@ class MessageViewController: UIViewController {
     @IBOutlet var inputField: UITextField!
     
     var messages: [Message] = Message.getMessages()
-    var profile: Profile!
+    var profile = Profile(type: .bill, name: "as", surname: "be", avatar: "cd", about: "rt")
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
     
     @IBAction func pressSend(sender: Any?) {

@@ -33,12 +33,12 @@ class DataManager {
         [userOne, userTwo]
     }
                                
-//    var messages: [Message] = [Message(text: "Привет Тим",
-//                                       person: DataManager.shared.userOne.profile),
-//                               Message(text: "Привет Билл",
-//                                       person: DataManager.shared.userTwo.profile)]
-  
-  var messages: [Message] = []
+    var defaultMessages: [Message] { [
+        Message(text: "Привет Тим", person: userOne.profile),
+        Message(text: "Привет Билл", person: userTwo.profile)
+        ]
+    }
     
+    var messages: [Message] = []
     
 }
