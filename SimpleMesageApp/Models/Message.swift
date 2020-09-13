@@ -17,12 +17,13 @@ extension Message {
     }
     
     static func getMessages() -> [Message] {
-        var messages = DataManager.shared.messages
+        var messages: [Message] = []
+        messages = DataManager.shared.defaultMessages
         
-        if messages.count == 0 {
-            messages = DataManager.shared.defaultMessages
+        for message in DataManager.shared.messages {
+            messages.append(message)
         }
-        
+
         return messages
     }
 }

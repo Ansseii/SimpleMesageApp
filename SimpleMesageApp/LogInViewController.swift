@@ -19,6 +19,10 @@ class LogInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var messages = Message.getMessages()
+        Message.setMessage(message: Message(text: "1223", person: Profile(type: .bill, name: "213", surname: "313", avatar: "", about: "1312")))
+        messages = Message.getMessages()
+        
         userNameTextField.delegate = self
         passwordTextField.delegate = self
     }
