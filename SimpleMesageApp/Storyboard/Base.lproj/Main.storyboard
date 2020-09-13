@@ -81,7 +81,7 @@
         <!--Profile-->
         <scene sceneID="UXM-TO-TC6">
             <objects>
-                <viewController id="eHn-ER-JWj" sceneMemberID="viewController">
+                <viewController id="eHn-ER-JWj" customClass="ProfileViewController" customModule="SimpleMesageApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0uV-w3-wI4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,16 +90,16 @@
                                 <rect key="frame" x="16" y="99" width="288" height="412"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ed6-Zg-YVZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="349"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="351"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRC-Ie-fO9">
-                                        <rect key="frame" x="106" y="359" width="76.5" height="21"/>
+                                        <rect key="frame" x="106" y="361" width="76.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWQ-67-CJn">
-                                        <rect key="frame" x="121" y="390" width="46.5" height="22"/>
+                                        <rect key="frame" x="121" y="391.5" width="46.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
