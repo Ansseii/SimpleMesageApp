@@ -20,6 +20,7 @@ class MessageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        inputField.delegate = self
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -31,6 +32,7 @@ class MessageViewController: UIViewController {
         let message = Message(text: inputField.text ?? "", person: profile)
         Message.setMessage(message: message)
         messages = Message.getMessages()
+        inputField.text = ""
         tableView.reloadData()
     }
 }
@@ -56,3 +58,10 @@ extension MessageViewController: UITableViewDataSource {
         return cell
     }
 }
+
+extension MessageViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
+}
+
