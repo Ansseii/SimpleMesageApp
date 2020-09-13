@@ -34,8 +34,8 @@ class DataManager {
     }
                                
     var defaultMessages: [Message] { [
-        Message(text: "Привет Тим", person: userOne.profile),
-        Message(text: "Привет Билл", person: userTwo.profile)
+        Message(text: "Привет Билл", person: userOne.profile),
+        Message(text: "Привет Тим", person: userTwo.profile)
         ]
     }
     
