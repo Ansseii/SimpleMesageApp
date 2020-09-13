@@ -34,19 +34,17 @@ class LogInViewController: UIViewController {
         guard let profileVC = tabBarController.viewControllers?.first as?
             ProfileViewController else { return }
         
-        guard let messageVC = tabBarController.viewControllers?.last as? MessageViewController else { return }
-        /*
+        guard let messageVC = tabBarController.viewControllers?.last as?
+            MessageViewController else { return }
+        
          if let user = self.user {
              profileVC.currentProfile = user.profile
-             //messageVC.currentProfile = user.profile
+             messageVC.profile = user.profile
          } else {
              showAlert("Invalid login or password",
                        withMessage: "Please, enter correct login and password",
                        textField: passwordTextField)
          }
-         */
-        profileVC.currentProfile = user.profile
-        //messageVC.currentProfile = user.profile
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -64,13 +62,15 @@ class LogInViewController: UIViewController {
     @IBAction func logInButtonPressed() {
         if let currentUser = User.auth(login: userNameTextField.text ?? "",
                                 password: passwordTextField.text ?? "") {
+         
             user = currentUser
             performSegue(withIdentifier: "welcomePage", sender: nil)
-
         } else {
             showAlert("Invalid login or password",
-            withMessage: "Please, enter correct login and password",
-            textField: passwordTextField)
+                      withMessage: "Please, enter correct login and password",
+                      textField: passwordTextField)
+            
+            return
         }
     }
     
