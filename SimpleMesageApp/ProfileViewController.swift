@@ -11,6 +11,8 @@ import UIKit
 
 // For profile View
 class ProfileViewController: UIViewController {
+  
+  var currentProfile: Profile!
 
     override func viewDidLoad() {
         super.viewDidLoad()
