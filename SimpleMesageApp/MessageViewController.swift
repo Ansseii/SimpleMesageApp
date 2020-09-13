@@ -41,12 +41,18 @@ class MessageViewController: UIViewController {
     }
     
     @IBAction func pressSend() {
-        let message = Message(text: inputField.text ?? "", person: profile)
-        Message.setMessage(message: message)
-        messages = Message.getMessages()
-        inputField.text = ""
-        inputField.resignFirstResponder()
-        tableView.reloadData()
+        guard let textInField = inputField.text else { return }
+        if textInField.isEmpty {
+            let message = "The field is empty. Please type message"
+            showAlert(title: "Attention", message: message)
+        } else {
+            let message = Message(text: inputField.text ?? "", person: profile)
+            Message.setMessage(message: message)
+            messages = Message.getMessages()
+            inputField.text = ""
+            inputField.resignFirstResponder()
+            tableView.reloadData()
+        }
     }
 }
 
@@ -83,6 +89,15 @@ extension MessageViewController: UITableViewDataSource {
         if self.view.frame.origin.y != 0 {
             self.view.frame.origin.y = 0
         }
+    }
+}
+
+extension MessageViewController {
+    private func showAlert(title: String?, message: String?) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okButton)
+        present(alert, animated: true)
     }
 }
 
