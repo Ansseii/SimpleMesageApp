@@ -13,6 +13,9 @@ class MessageViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var inputField: UITextField!
+    
+    var messages: [Message] = Message.getMessages()
+    var profile: Profile!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +23,8 @@ class MessageViewController: UIViewController {
     }
     
     @IBAction func pressSend(sender: Any?) {
+        let message = Message(text: inputField.text ?? "", person: profile)
+        Message.setMessage(message: message)
         
     }
 }
@@ -27,19 +32,21 @@ class MessageViewController: UIViewController {
 extension MessageViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        0
+        messages.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        nil
+        messages[section].person.fullname
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        0
+        1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath)
+        let message = messages[indexPath.section]
+        cell.textLabel?.text = message.text
         return cell
     }
 }
