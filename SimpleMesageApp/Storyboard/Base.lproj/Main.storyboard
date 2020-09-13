@@ -132,11 +132,14 @@
             <objects>
                 <tabBarController id="jft-AW-LgL" customClass="TabBarViewController" customModule="SimpleMesageApp" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="App" id="0q7-KS-gTl">
-                        <barButtonItem key="rightBarButtonItem" id="3bs-vo-aEE">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EBK-3Y-FPg">
+                        <barButtonItem key="rightBarButtonItem" id="uMt-xe-McK">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NTu-K4-pTS">
                                 <rect key="frame" x="233" y="7" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Logout"/>
+                                <connections>
+                                    <segue destination="WJS-L8-m0H" kind="unwind" unwindAction="unwindWithSegue:" id="h1U-hB-jza"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -151,6 +154,7 @@
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0zv-No-eex" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="WJS-L8-m0H" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="204" y="66"/>
         </scene>
