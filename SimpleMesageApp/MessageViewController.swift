@@ -52,8 +52,7 @@ class MessageViewController: UIViewController {
             
             Message.setMessage(message: message)
             
-            guard let msg = botMessage else { return }
-            Message.setMessage(message: msg)
+            if let msg = botMessage { Message.setMessage(message: msg) }
             
             messages = Message.getMessages()
             inputField.text = ""
