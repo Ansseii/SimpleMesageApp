@@ -355,7 +355,7 @@
 		1FAE711B250BFB72009949D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LX6Y4EQU3T;
 				INFOPLIST_FILE = SimpleMesageApp/SupportingFiles/Info.plist;
@@ -374,7 +374,7 @@
 		1FAE711C250BFB72009949D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LX6Y4EQU3T;
 				INFOPLIST_FILE = SimpleMesageApp/SupportingFiles/Info.plist;
