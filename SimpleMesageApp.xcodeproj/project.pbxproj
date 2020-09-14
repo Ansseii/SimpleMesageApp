@@ -68,27 +68,23 @@
 		1FAE7108250BFB72009949D9 /* SimpleMesageApp */ = {
 			isa = PBXGroup;
 			children = (
-				60D409A3250E26F100F7A87D /* LogInViewController.swift */,
-				1FAE711D250CF9D5009949D9 /* Storyboard */,
+				603C7C24250F94DB00DE6EF4 /* ViewControllers */,
 				3750F567250C30CB00817D94 /* Models */,
-				1FAE7109250BFB72009949D9 /* AppDelegate.swift */,
-				1FAE710B250BFB72009949D9 /* SceneDelegate.swift */,
-				2577D783250D2E31006F0D02 /* MessageViewController.swift */,
-				3750F56A250C327900817D94 /* DataManager.swift */,
-				1FAE7112250BFB72009949D9 /* Assets.xcassets */,
-				1FAE7114250BFB72009949D9 /* LaunchScreen.storyboard */,
-				1FAE7117250BFB72009949D9 /* Info.plist */,
-				1F9E6267250E5CAF00621B34 /* ProfileViewController.swift */,
+				603C7C23250F94D000DE6EF4 /* Services */,
+				1FAE711D250CF9D5009949D9 /* Storyboards */,
+				603C7C26250F950B00DE6EF4 /* SupportingFiles */,
+				603C7C25250F94F000DE6EF4 /* Sources */,
 			);
 			path = SimpleMesageApp;
 			sourceTree = "<group>";
 		};
-		1FAE711D250CF9D5009949D9 /* Storyboard */ = {
+		1FAE711D250CF9D5009949D9 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				1FAE710F250BFB72009949D9 /* Main.storyboard */,
+				1FAE7114250BFB72009949D9 /* LaunchScreen.storyboard */,
 			);
-			path = Storyboard;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		3750F567250C30CB00817D94 /* Models */ = {
@@ -99,6 +95,42 @@
 				3750F56E250CFD3E00817D94 /* Profile.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		603C7C23250F94D000DE6EF4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3750F56A250C327900817D94 /* DataManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		603C7C24250F94DB00DE6EF4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				60D409A3250E26F100F7A87D /* LogInViewController.swift */,
+				2577D783250D2E31006F0D02 /* MessageViewController.swift */,
+				1F9E6267250E5CAF00621B34 /* ProfileViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		603C7C25250F94F000DE6EF4 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1FAE7112250BFB72009949D9 /* Assets.xcassets */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		603C7C26250F950B00DE6EF4 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				1FAE7109250BFB72009949D9 /* AppDelegate.swift */,
+				1FAE710B250BFB72009949D9 /* SceneDelegate.swift */,
+				1FAE7117250BFB72009949D9 /* Info.plist */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,7 +358,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LX6Y4EQU3T;
-				INFOPLIST_FILE = SimpleMesageApp/Info.plist;
+				INFOPLIST_FILE = SimpleMesageApp/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -345,7 +377,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LX6Y4EQU3T;
-				INFOPLIST_FILE = SimpleMesageApp/Info.plist;
+				INFOPLIST_FILE = SimpleMesageApp/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
