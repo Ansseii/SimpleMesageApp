@@ -25,4 +25,13 @@ extension Message {
         
         return dataManager.messages      
     }
+    
+    static func botMessage(input message: Message) -> Message? {
+        for (key, value) in DataManager.shared.botMessages {
+            if (key == message.text) && (message.person.type != value.person.type){
+                return value
+            }
+        }
+        return nil
+    }
 }

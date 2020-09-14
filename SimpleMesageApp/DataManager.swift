@@ -41,4 +41,8 @@ class DataManager {
     
     var messages: [Message] = []
     
+    var botMessages: [String:Message] {
+        ["Привет Бил!": Message(text: "Привет Тим! Когда там уже выйдет новый айфон 12?", person: userTwo.profile )]
+    }
 }
+

@@ -47,7 +47,14 @@ class MessageViewController: UIViewController {
             showAlert(title: "Attention", message: message)
         } else {
             let message = Message(text: inputField.text ?? "", person: profile)
+            
+            let botMessage = Message.botMessage(input: message)
+            
             Message.setMessage(message: message)
+            
+            guard let msg = botMessage else { return }
+            Message.setMessage(message: msg)
+            
             messages = Message.getMessages()
             inputField.text = ""
             inputField.resignFirstResponder()
