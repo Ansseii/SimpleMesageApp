@@ -20,7 +20,10 @@ class MessageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
         inputField.delegate = self
+        
+        tableView.separatorStyle = .none
         
         NotificationCenter.default.addObserver(
             self,
@@ -90,7 +93,7 @@ extension MessageViewController: UITableViewDataSource {
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height
+                self.view.frame.origin.y -= keyboardSize.height * 0.75
             }
         }
     }
@@ -117,3 +120,11 @@ extension MessageViewController: UITextFieldDelegate {
     }
 }
 
+extension MessageViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        view.tintColor = .white
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = .systemBlue
+    }
+}
