@@ -43,11 +43,10 @@ class DataManager {
   
   var botMessages: [Message : Message] {
     [
-      Message(text: "Привет Билл!", person: userOne.profile) :
-        Message(text: "Йоу Тим!", person: userTwo.profile),
-      Message(text: "Привет  Тим!", person: userTwo.profile) :
-        Message(text: "Йоу Билл!", person: userOne.profile)
+      Message(text: "Когда сделаете нормальный тачпад?)", person: userOne.profile) :
+        Message(text: "Для игр тачпад не нужен 😉", person: userTwo.profile),
+      Message(text: "У тебя есть яблоки?", person: userTwo.profile) :
+        Message(text: "Есть, но только надкусанные. 😉", person: userOne.profile)
     ]
   }
-  
 }
