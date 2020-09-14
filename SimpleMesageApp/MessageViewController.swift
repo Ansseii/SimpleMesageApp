@@ -48,10 +48,20 @@ class MessageViewController: UIViewController {
         } else {
             let message = Message(text: inputField.text ?? "", person: profile)
             Message.setMessage(message: message)
+          
             messages = Message.getMessages()
             inputField.text = ""
             inputField.resignFirstResponder()
             tableView.reloadData()
+          
+          if let botMessage = Message.getBotMessage(for: message) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+              Message.setMessage(message: botMessage)
+              self.messages = Message.getMessages()
+              self.tableView.reloadData()
+            }
+          }
+          
         }
     }
 }

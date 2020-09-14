@@ -6,7 +6,7 @@
 //  Copyright © 2020 Aleksandr Lukash. All rights reserved.
 //
 
-struct Profile {
+struct Profile: Hashable {
     let type: PersonType
     let name: String
     let surname: String
