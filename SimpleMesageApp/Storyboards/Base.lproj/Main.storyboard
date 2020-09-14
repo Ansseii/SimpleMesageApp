@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PmK-gd-J1b">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,24 +12,24 @@
             <objects>
                 <viewController id="PmK-gd-J1b" customClass="LogInViewController" customModule="SimpleMesageApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BCa-zg-Zpd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="k2Z-dg-Lol">
-                                <rect key="frame" x="50" y="150" width="220" height="172"/>
+                                <rect key="frame" x="50" y="343" width="275" height="126"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hyQ-qj-MAv">
-                                        <rect key="frame" x="0.0" y="0.0" width="220" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VHC-eB-zgt">
-                                        <rect key="frame" x="0.0" y="46" width="220" height="34"/>
+                                        <rect key="frame" x="0.0" y="46" width="275" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9I-Et-94m">
-                                        <rect key="frame" x="0.0" y="92" width="220" height="34"/>
+                                        <rect key="frame" x="0.0" y="92" width="275" height="34"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <state key="normal" title="Login"/>
                                         <connections>
@@ -37,35 +37,38 @@
                                             <segue destination="oC4-fH-977" kind="presentation" identifier="welcomePage" modalPresentationStyle="fullScreen" id="z5D-c2-qvE"/>
                                         </connections>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="Vdu-Ht-ZmE">
-                                        <rect key="frame" x="0.0" y="138" width="220" height="34"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCN-aF-W5a">
-                                                <rect key="frame" x="0.0" y="0.0" width="86.5" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                                <state key="normal" title="Login as Tim"/>
-                                                <connections>
-                                                    <action selector="autoLoginAction:" destination="PmK-gd-J1b" eventType="touchUpInside" id="nLj-rP-1xB"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgG-IX-su6">
-                                                <rect key="frame" x="133.5" y="0.0" width="86.5" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                                <state key="normal" title="Login as Bill"/>
-                                                <connections>
-                                                    <action selector="autoLoginAction:" destination="PmK-gd-J1b" eventType="touchUpInside" id="rOn-vr-7Cn"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="Vdu-Ht-ZmE">
+                                <rect key="frame" x="50" y="698" width="275" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCN-aF-W5a">
+                                        <rect key="frame" x="0.0" y="0.0" width="114" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                        <state key="normal" title="Login as Tim"/>
+                                        <connections>
+                                            <action selector="autoLoginAction:" destination="PmK-gd-J1b" eventType="touchUpInside" id="nLj-rP-1xB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgG-IX-su6">
+                                        <rect key="frame" x="161" y="0.0" width="114" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                        <state key="normal" title="Login as Bill"/>
+                                        <connections>
+                                            <action selector="autoLoginAction:" destination="PmK-gd-J1b" eventType="touchUpInside" id="rOn-vr-7Cn"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="aLR-L3-a7W" firstAttribute="bottom" secondItem="Vdu-Ht-ZmE" secondAttribute="bottom" constant="50" id="9NI-tn-46S"/>
                             <constraint firstItem="k2Z-dg-Lol" firstAttribute="leading" secondItem="aLR-L3-a7W" secondAttribute="leading" constant="50" id="OvV-Vs-LIn"/>
-                            <constraint firstItem="k2Z-dg-Lol" firstAttribute="top" secondItem="aLR-L3-a7W" secondAttribute="top" constant="150" id="eaq-1W-07p"/>
+                            <constraint firstItem="aLR-L3-a7W" firstAttribute="trailing" secondItem="Vdu-Ht-ZmE" secondAttribute="trailing" constant="50" id="QGp-IL-7ef"/>
+                            <constraint firstItem="Vdu-Ht-ZmE" firstAttribute="leading" secondItem="aLR-L3-a7W" secondAttribute="leading" constant="50" id="aKz-Mz-adZ"/>
                             <constraint firstItem="aLR-L3-a7W" firstAttribute="trailing" secondItem="k2Z-dg-Lol" secondAttribute="trailing" constant="50" id="rn6-mS-Hde"/>
+                            <constraint firstItem="k2Z-dg-Lol" firstAttribute="centerY" secondItem="BCa-zg-Zpd" secondAttribute="centerY" id="uJC-O3-hgr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aLR-L3-a7W"/>
                     </view>
@@ -83,23 +86,23 @@
             <objects>
                 <viewController id="eHn-ER-JWj" customClass="ProfileViewController" customModule="SimpleMesageApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0uV-w3-wI4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="d2s-1k-OCi">
-                                <rect key="frame" x="16" y="99" width="288" height="412"/>
+                                <rect key="frame" x="16" y="148" width="343" height="573"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ed6-Zg-YVZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="351"/>
+                                        <rect key="frame" x="27.666666666666657" y="0.0" width="288" height="488.66666666666669"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRC-Ie-fO9">
-                                        <rect key="frame" x="106" y="361" width="76.5" height="20.5"/>
+                                        <rect key="frame" x="133.33333333333334" y="498.66666666666657" width="76.333333333333343" height="28.333333333333314"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KWQ-67-CJn">
-                                        <rect key="frame" x="121" y="391.5" width="46.5" height="20.5"/>
+                                        <rect key="frame" x="148.33333333333334" y="537" width="46.333333333333343" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -134,7 +137,7 @@
                     <navigationItem key="navigationItem" title="App" id="0q7-KS-gTl">
                         <barButtonItem key="rightBarButtonItem" id="uMt-xe-McK">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NTu-K4-pTS">
-                                <rect key="frame" x="233" y="7" width="71" height="30"/>
+                                <rect key="frame" x="288" y="7" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Logout"/>
                                 <connections>
@@ -163,33 +166,33 @@
             <objects>
                 <viewController id="g6F-tV-7Gp" customClass="MessageViewController" customModule="SimpleMesageApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="95R-xt-9P5">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UWO-v7-chq">
-                                <rect key="frame" x="0.0" y="44" width="320" height="414"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="580"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="messageCell" id="4jX-d8-CUR">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4jX-d8-CUR" id="Dfp-ya-qed">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JkI-Ld-h6r">
-                                <rect key="frame" x="16" y="477" width="288" height="34"/>
+                                <rect key="frame" x="16" y="687" width="343" height="34"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MoL-mV-gmg">
-                                        <rect key="frame" x="0.0" y="0.0" width="242" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="297" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dyf-Jd-JYn">
-                                        <rect key="frame" x="252" y="0.0" width="36" height="34"/>
+                                        <rect key="frame" x="307" y="0.0" width="36" height="34"/>
                                         <state key="normal" title="Send"/>
                                         <connections>
                                             <action selector="pressSend" destination="g6F-tV-7Gp" eventType="touchUpInside" id="iNN-tX-iHf"/>
@@ -226,7 +229,7 @@
                 <navigationController id="oC4-fH-977" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="zia-5O-T3D"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="6Tr-j7-wHm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="c7s-bF-e8p">

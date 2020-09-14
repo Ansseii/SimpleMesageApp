@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "bill.png",
+      "filename" : "bilx1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "bill@2x.png",
+      "filename" : "bilx2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "bill@3x.png",
+      "filename" : "iTunesArtwork@1x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
