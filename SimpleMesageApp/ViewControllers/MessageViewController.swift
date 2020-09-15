@@ -19,6 +19,9 @@ class MessageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.rowHeight = 55
+        
         tableView.dataSource = self
         inputField.delegate = self
         
@@ -61,7 +64,6 @@ class MessageViewController: UIViewController {
               self.tableView.reloadData()
             }
           }
-          
         }
     }
 }
@@ -80,10 +82,18 @@ extension MessageViewController: UITableViewDataSource {
         1
     }
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = UIColor.white  
+
+        return view
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath)
-        let message = messages[indexPath.section]
-        cell.textLabel?.text = message.text
+        
+        setUpCell(cell, withSection: indexPath.section)
+        
         return cell
     }
     
@@ -102,7 +112,25 @@ extension MessageViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - Private funcs
 extension MessageViewController {
+    
+     private func setUpCell(_ cell: UITableViewCell, withSection ofIndexPath: Int) {
+         let message = messages[ofIndexPath]
+         cell.textLabel?.text = message.text
+         
+         cell.textLabel?.textAlignment = .right
+         cell.textLabel?.numberOfLines = 0
+         cell.textLabel?.font = cell.textLabel?.font.withSize(13)
+          
+         
+         if message.person != profile {
+             let type = message.person.type
+             cell.textLabel?.textAlignment = .left
+             cell.imageView?.image = UIImage(named: type.rawValue)
+         }
+     }
+    
     private func showAlert(title: String?, message: String?) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okButton = UIAlertAction(title: "OK", style: .default)
