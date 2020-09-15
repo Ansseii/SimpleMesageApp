@@ -13,31 +13,39 @@ class MessageViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var inputField: UITextField!
+    @IBOutlet weak var sendButton: UIButton!
+    
     
     var messages: [Message] = Message.getMessages()
     var profile: Profile!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+      tableView.rowHeight = 55
+      
         tableView.dataSource = self
+        tableView.delegate = self
         inputField.delegate = self
+        
+        tableView.separatorStyle = .none
         
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(keyboardWillShow),
-            name: UIResponder.keyboardWillShowNotification,
+            name: UITextField.keyboardWillShowNotification,
             object: nil)
         
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(keyboardWillHide),
-            name: UIResponder.keyboardWillHideNotification,
+            name: UITextField.keyboardWillHideNotification,
             object: nil)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
+        
     }
     
     @IBAction func pressSend() {
@@ -82,22 +90,26 @@ extension MessageViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath)
-        let message = messages[indexPath.section]
-        cell.textLabel?.text = message.text
+      setUpCell(cell, withSection: indexPath.section)
+      
         return cell
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height
+            if inputField.frame.origin.y == 0 {
+                inputField.frame.origin.y -= keyboardSize.height * 0.75
+                sendButton.layer.frame.origin.y -= keyboardSize.height * 0.75
+                
+                
             }
         }
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
-        if self.view.frame.origin.y != 0 {
-            self.view.frame.origin.y = 0
+        if inputField.frame.origin.y != 0 {
+            inputField.frame.origin.y = 0
+            sendButton.layer.frame.origin.y = 0
         }
     }
 }
@@ -109,6 +121,22 @@ extension MessageViewController {
         alert.addAction(okButton)
         present(alert, animated: true)
     }
+  
+  private func setUpCell(_ cell: UITableViewCell, withSection ofIndexPath: Int) {
+      let message = messages[ofIndexPath]
+      cell.textLabel?.text = message.text
+      
+      cell.textLabel?.textAlignment = .right
+      cell.textLabel?.numberOfLines = 0
+      cell.textLabel?.font = cell.textLabel?.font.withSize(13)
+       
+      
+      if message.person != profile {
+          let type = message.person.type
+          cell.textLabel?.textAlignment = .left
+          cell.imageView?.image = UIImage(named: type.rawValue)
+      }
+  }
 }
 
 extension MessageViewController: UITextFieldDelegate {
@@ -117,3 +145,20 @@ extension MessageViewController: UITextFieldDelegate {
     }
 }
 
+extension MessageViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        view.tintColor = .white
+        let header = view as! UITableViewHeaderFooterView
+      
+      let message = messages[section]
+      
+      if message.person == profile {
+              header.textLabel?.textAlignment = .right
+      } else {
+        header.textLabel?.textAlignment = .left
+      }
+      
+        header.textLabel?.textColor = .systemBlue
+    }
+}
