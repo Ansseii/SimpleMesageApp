@@ -284,9 +284,6 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MoL-mV-gmg">
                                         <rect key="frame" x="0.0" y="0.0" width="242" height="34"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="336" id="LpX-NW-EVP"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                     </textField>
@@ -304,6 +301,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="MoL-mV-gmg" firstAttribute="width" secondItem="95R-xt-9P5" secondAttribute="width" multiplier="0.75625" id="5l6-Mj-36a"/>
                             <constraint firstItem="UWO-v7-chq" firstAttribute="leading" secondItem="vrX-Pk-4zz" secondAttribute="leading" id="CpC-Am-BXo"/>
                             <constraint firstItem="UWO-v7-chq" firstAttribute="top" secondItem="vrX-Pk-4zz" secondAttribute="top" id="QdH-m1-Reb"/>
                             <constraint firstItem="vrX-Pk-4zz" firstAttribute="trailing" secondItem="JkI-Ld-h6r" secondAttribute="trailing" constant="16" id="QmC-1B-GHj"/>

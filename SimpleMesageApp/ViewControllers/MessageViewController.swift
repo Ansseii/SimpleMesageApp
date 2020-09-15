@@ -21,6 +21,8 @@ class MessageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+      tableView.rowHeight = 55
+      
         tableView.dataSource = self
         tableView.delegate = self
         inputField.delegate = self
@@ -88,8 +90,8 @@ extension MessageViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath)
-        let message = messages[indexPath.section]
-        cell.textLabel?.text = message.text
+      setUpCell(cell, withSection: indexPath.section)
+      
         return cell
     }
     
@@ -119,6 +121,22 @@ extension MessageViewController {
         alert.addAction(okButton)
         present(alert, animated: true)
     }
+  
+  private func setUpCell(_ cell: UITableViewCell, withSection ofIndexPath: Int) {
+      let message = messages[ofIndexPath]
+      cell.textLabel?.text = message.text
+      
+      cell.textLabel?.textAlignment = .right
+      cell.textLabel?.numberOfLines = 0
+      cell.textLabel?.font = cell.textLabel?.font.withSize(13)
+       
+      
+      if message.person != profile {
+          let type = message.person.type
+          cell.textLabel?.textAlignment = .left
+          cell.imageView?.image = UIImage(named: type.rawValue)
+      }
+  }
 }
 
 extension MessageViewController: UITextFieldDelegate {
@@ -132,6 +150,15 @@ extension MessageViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         view.tintColor = .white
         let header = view as! UITableViewHeaderFooterView
+      
+      let message = messages[section]
+      
+      if message.person == profile {
+              header.textLabel?.textAlignment = .right
+      } else {
+        header.textLabel?.textAlignment = .left
+      }
+      
         header.textLabel?.textColor = .systemBlue
     }
 }

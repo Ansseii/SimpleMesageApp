@@ -32,8 +32,8 @@ extension Profile {
   }
 }
 
-enum PersonType {
-  case tim
-  case bill
+enum PersonType: String {
+  case tim = "tim"
+  case bill = "bill"
 }
 
