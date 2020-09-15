@@ -1,6 +1,6 @@
 # SimpleMessage
 
-<img src="SimpleMesageApp/Sources/Assets.xcassets/LaunchScreen.imageset/LaunchScreen.png" width="100">
+<img src="SimpleMesageApp/Sources/Assets.xcassets/LaunchScreen.imageset/LaunchScreen.png" width="250">
 
 Простой пример реализации мессенджера, выполненный с душой.
 
