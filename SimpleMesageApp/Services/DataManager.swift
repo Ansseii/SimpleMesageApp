@@ -5,6 +5,7 @@
 //  Created by ddyack on 12.09.2020.
 //  Copyright © 2020 Aleksandr Lukash. All rights reserved.
 //
+import UIKit
 
 class DataManager {
   
@@ -17,16 +18,25 @@ class DataManager {
                              profile: Profile(type: .tim,
                                               name: "Tim",
                                               surname: "Cook",
+                                              birthDate: "1 November 1960",
+                                              birthPlace: "Mobile, Alabama, U.S.",
                                               avatar: "tim",
-                                              about: "Ти́моти До́нальд Кук (англ. Timothy Donald Cook; род. 1 ноября 1960 года, Мобил, Алабама, США) — американский менеджер и генеральный директор компании Apple. Пришёл в компанию в марте 1998 года. Занял должность гендиректора после отставки (в связи с продолжительной болезнью) Стива Джобса 24 августа 2011 года."))
+                                              about: """
+Timothy Donald Cook is an American business executive, philanthropist and industrial engineer. Cook is the chief executive officer of Apple Inc., and previously served as the company's chief operating officer under its cofounder Steve Jobs.
+Cook joined Apple in March 1998 as a senior vice president for worldwide operations, and then served as the executive vice president for worldwide sales and operations. He was made the chief executive on August 24, 2011, prior to Jobs' death in October of that year. During his tenure as the chief executive, he has advocated for the political reformation of international and domestic surveillance, cybersecurity, American manufacturing, and environmental preservation. Since 2011 when he took over Apple, to 2020, Cook doubled the company’s revenue and profit, and increased its market value from $348 billion to $1.9 trillion. In 2014, Cook became the first chief executive of a Fortune 500 company to publicly come out as gay. Cook also serves on the boards of directors of Nike, Inc.,the National Football Foundation, and is a trustee of Duke University. In March 2015, he said he planned to donate his entire stock fortune to charity.
+"""))
   
   private let userTwo = User(login: "bill",
                              password: "123",
                              profile: Profile(type: .bill,
                                               name: "Bill",
                                               surname: "Gates",
+                                              birthDate: "28 October 1955",
+                                              birthPlace: "Seattle, Washington, U.S.",
                                               avatar: "bill",
-                                              about: "Уи́льям Ге́нри Гейтс III (англ. William Henry Gates III; 28 октября 1955, Сиэтл, Вашингтон), более известный как Билл Гейтс (англ. Bill Gates) — американский предприниматель и общественный деятель, филантроп, один из создателей (совместно с Полом Алленом) и бывший крупнейший акционер компании Microsoft. До июня 2008 года являлся руководителем компании, после ухода с поста остался в должности её неисполнительного председателя совета директоров. Также является сопредседателем благотворительного Фонда Билла и Мелинды Гейтс, членом совета директоров Berkshire Hathaway, ген. директор Cascade investment."))
+                                              about: """
+William Henry Gates III is an American business magnate, software developer, investor, and philanthropist. He is best known as the co-founder of Microsoft Corporation. During his career at Microsoft, Gates held the positions of chairman, chief executive officer (CEO), president and chief software architect, while also being the largest individual shareholder until May 2014. He is one of the best-known entrepreneurs and pioneers of the microcomputer revolution of the 1970s and 1980s.
+"""))
   
   
   var users: [User] {
@@ -49,4 +59,15 @@ class DataManager {
         Message(text: "Есть, но только надкусанные. 😉", person: userOne.profile)
     ]
   }
+  
+  let billPictures = [UIImage(named: "Bill_Gates_1"),
+                      UIImage(named: "Bill_Gates_2"),
+                      UIImage(named: "Bill_Gates_3"),
+                      UIImage(named: "Bill_Gates_4"),
+                      UIImage(named: "Bill_Gates_5")]
+  
+  let timPictures = [UIImage(named: "Tim_Cook_1"),
+                     UIImage(named: "Tim_Cook_2"),
+                     UIImage(named: "Tim_Cook_4"),
+                     UIImage(named: "Tim_Cook_5")]
 }
