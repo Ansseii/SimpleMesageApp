@@ -68,7 +68,6 @@ William Henry Gates III is an American business magnate, software developer, inv
   
   let timPictures = [UIImage(named: "Tim_Cook_1"),
                      UIImage(named: "Tim_Cook_2"),
-                     UIImage(named: "Tim_Cook_3"),
                      UIImage(named: "Tim_Cook_4"),
                      UIImage(named: "Tim_Cook_5")]
 }

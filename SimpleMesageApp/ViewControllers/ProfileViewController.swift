@@ -78,7 +78,7 @@ class CustomCell: UICollectionViewCell {
   fileprivate let image: UIImageView = {
     let iv = UIImageView()
     iv.translatesAutoresizingMaskIntoConstraints = false
-    iv.contentMode = .scaleAspectFit
+    iv.contentMode = .scaleAspectFill
     iv.clipsToBounds = true
     iv.layer.cornerRadius = 12
     return iv
