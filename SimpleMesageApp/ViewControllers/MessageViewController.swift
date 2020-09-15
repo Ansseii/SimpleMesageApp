@@ -13,6 +13,8 @@ class MessageViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var inputField: UITextField!
+    @IBOutlet weak var sendButton: UIButton!
+    
     
     var messages: [Message] = Message.getMessages()
     var profile: Profile!
@@ -28,19 +30,20 @@ class MessageViewController: UIViewController {
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(keyboardWillShow),
-            name: UIResponder.keyboardWillShowNotification,
+            name: UITextField.keyboardWillShowNotification,
             object: nil)
         
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(keyboardWillHide),
-            name: UIResponder.keyboardWillHideNotification,
+            name: UITextField.keyboardWillHideNotification,
             object: nil)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
+        
     }
     
     @IBAction func pressSend() {
@@ -92,15 +95,19 @@ extension MessageViewController: UITableViewDataSource {
     
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height * 0.75
+            if inputField.frame.origin.y == 0 {
+                inputField.frame.origin.y -= keyboardSize.height * 0.75
+                sendButton.layer.frame.origin.y -= keyboardSize.height * 0.75
+                
+                
             }
         }
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
-        if self.view.frame.origin.y != 0 {
-            self.view.frame.origin.y = 0
+        if inputField.frame.origin.y != 0 {
+            inputField.frame.origin.y = 0
+            sendButton.layer.frame.origin.y = 0
         }
     }
 }
