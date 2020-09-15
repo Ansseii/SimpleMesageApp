@@ -63,7 +63,7 @@ class MessageViewController: UIViewController {
             tableView.reloadData()
           
           if let botMessage = Message.getBotMessage(for: message) {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
               Message.setMessage(message: botMessage)
               self.messages = Message.getMessages()
               self.tableView.reloadData()
