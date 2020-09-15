@@ -317,6 +317,7 @@
                     <tabBarItem key="tabBarItem" title="Chat" image="square.and.pencil" catalog="system" id="FtM-KV-Kmp"/>
                     <connections>
                         <outlet property="inputField" destination="MoL-mV-gmg" id="nXu-xp-8ql"/>
+                        <outlet property="sendButton" destination="Dyf-Jd-JYn" id="0Zw-Fl-T4s"/>
                         <outlet property="tableView" destination="UWO-v7-chq" id="VOc-vE-YcV"/>
                     </connections>
                 </viewController>
