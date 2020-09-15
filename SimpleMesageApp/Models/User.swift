@@ -7,31 +7,31 @@
 //
 
 struct User {
-    let login: String
-    let password: String
-    let profile: Profile
+  let login: String
+  let password: String
+  let profile: Profile
 }
 
 extension User {
-    static func getUsers() -> [User] {
-        DataManager.shared.users
+  static func getUsers() -> [User] {
+    DataManager.shared.users
+  }
+  
+  static func auth(login: String, password: String) -> User? {
+    for user in getUsers() {
+      if user.login == login && user.password == password {
+        return user
+      }
     }
-    
-    static func auth(login: String, password: String) -> User? {
-        for user in getUsers() {
-            if user.login == login && user.password == password {
-                return user
-            }
-        }
-        return nil
+    return nil
+  }
+  
+  static func getUser(by type: PersonType) -> User? {
+    for user in getUsers() {
+      if user.profile.type == type {
+        return user
+      }
     }
-    
-    static func getUser(by type: PersonType) -> User? {
-        for user in getUsers() {
-            if user.profile.type == type {
-                return user
-            }
-        }
-        return nil
-    }
+    return nil
+  }
 }

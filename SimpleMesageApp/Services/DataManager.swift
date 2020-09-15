@@ -53,10 +53,14 @@ William Henry Gates III is an American business magnate, software developer, inv
   
   var botMessages: [Message : Message] {
     [
-      Message(text: "Когда сделаете нормальный тачпад?)", person: userOne.profile) :
-        Message(text: "Для игр тачпад не нужен 😉", person: userTwo.profile),
-      Message(text: "У тебя есть яблоки?", person: userTwo.profile) :
-        Message(text: "Есть, но только надкусанные. 😉", person: userOne.profile)
+      Message(text: "Когда сделаете нормальный тачпад?)",
+              person: userOne.profile) :
+        Message(text: "Для игр тачпад не нужен 😉",
+                person: userTwo.profile),
+      Message(text: "У тебя есть яблоки?",
+              person: userTwo.profile) :
+        Message(text: "Есть, но только надкусанные. 😉",
+                person: userOne.profile)
     ]
   }
   
